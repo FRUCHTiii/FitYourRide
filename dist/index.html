@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ride Fit · Geometrieübertragung</title>
+<meta name="description" content="Geometrie und gemessene Kontaktpunkte auf das Zwift Ride übertragen.">
+<meta name="theme-color" content="#162b2a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23162b2a'/%3E%3Ctext x='8' y='24' font-family='Arial' font-size='24' fill='%23dcf77a'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<a class="skip-link" href="#bike-form">Zu den Eingaben</a>
+<header class="site-header"><span class="brand"><span class="brand-mark" aria-hidden="true">R↗</span>RIDE FIT</span><span class="header-context">Geometrieübertragung</span><button type="button" id="print" class="button quiet">Protokoll drucken</button></header>
+<main>
+<div class="demo-banner" id="demo-banner" hidden><span class="badge amber">LENKER GEPRÜFT</span><p>Lenker geprüft. Hoods bei 400 mm kalibriert. Sattel: gemessene Ausgangseinstellung.</p></div>
+<div class="workspace">
+<section class="panel input-panel" aria-labelledby="input-title">
+<div class="panel-head"><h2 id="input-title">Zielrad</h2><span class="muted">mm / °</span></div>
+<form id="bike-form" novalidate>
+<div class="segment" role="group" aria-label="Eingabemethode"><button type="button" id="mode-frame" aria-pressed="true">Geometrie & Vorbau</button><button type="button" id="mode-direct" aria-pressed="false">Direkte Maße</button></div>
+<fieldset class="contact-choice"><legend>Cockpit-Messpunkt</legend><label class="sr-only" for="point">Cockpit-Messpunkt</label><select id="point"><option value="clamp">Lenkerklemmmitte</option><option value="reach">Lenker-Reach berücksichtigen · Näherung</option><option value="hoods">Handposition auf den Hoods</option></select><p class="hint" id="point-hint">Überträgt die Klemmmitte; eine identische Handposition ist damit nicht bestimmt.</p></fieldset>
+<div id="frame-mode">
+<fieldset><legend>Rahmengeometrie</legend><div class="fields" id="frame-fields"></div><p class="hint">Alle Längen in mm eingeben.</p></fieldset>
+<fieldset><legend>Steuersatz & Vorbau</legend><div class="fields" id="cockpit-fields"></div><p class="hint">Abdeckung und Spacer entlang des Gabelschafts. Vorbauwinkel nach üblicher ±°-Angabe.</p></fieldset>
+<fieldset id="hand-inputs" hidden><legend>Gemessener Hood-Offset am Zielrad</legend><div class="fields" id="hand-fields"></div><p class="hint">Von der Klemmmitte zum definierten Handpunkt, inklusive Lenker und Griffmontage. +X vor, +Y hoch. Nomineller Lenker-Reach allein reicht dafür nicht.</p></fieldset>
+</div>
+<div id="direct-mode" hidden><fieldset><legend id="direct-legend">Lenkerklemmmitte ab Tretlager</legend><div class="fields" id="direct-fields"></div><p class="hint">Effektiven Reach/Stack nur mit passender Messpunktdefinition verwenden.</p></fieldset></div>
+<fieldset id="reach-inputs" hidden><legend>Lenker am Zielrad</legend><div class="fields" id="reach-fields"></div><p class="hint">Näherung bei vergleichbarer Griffmontage und Lenkerrotation. Nur horizontaler Ausgleich; Klemmhöhe bleibt gleich.</p></fieldset>
+<fieldset class="saddle-section"><legend>Sattel · A / B / C</legend><label class="toggle" for="includeSaddle"><input type="checkbox" id="includeSaddle" aria-controls="saddle-inputs"><span>Sattel berücksichtigen</span></label><div id="saddle-inputs" hidden><label for="saddleMode">Sattelposition bestimmen</label><select id="saddleMode"><option value="measured">Sattelhöhe und Setback übertragen</option><option value="geometry">Rahmengeometrie annähern</option></select><label for="heightType">Arbeitshöhe / Sattelhöhe</label><select id="heightType"><option value="radial">Diagonal ab Tretlagermitte</option><option value="vertical">Senkrecht über Tretlagermitte</option></select><div class="fields" id="saddle-fields"></div><p class="hint" id="saddle-hint">Schräge Sattelhöhe und optionalen Setback bis zum selben Referenzpunkt eingeben. Ergebnis als Ausgangseinstellung nachmessen.</p><p class="hint">Sattelhöhe: Tretlagermitte bis Referenzpunkt auf der Satteloberfläche. Setback: waagerechter Abstand zum selben Punkt. Neigung optional: + Spitze hoch, − Spitze tief; manuell nachstellen.</p></div></fieldset>
+<fieldset><legend>Trainer anheben · Näherung</legend><div class="fields" id="trainer-fields"></div><p class="hint">Gesamten Trainer gleichmäßig anheben; vordere Auflage bleibt stehen. Lenker und Griffe nicht nachjustieren. Auflageabstand geschätzt: ca. 1.033 mm. 100 mm ist eine Rechengrenze, keine mechanische Freigabe.</p><button type="button" id="suggest-lift" class="button quiet">Passende Anhebung berechnen</button><div id="lift-suggestions" aria-live="polite"></div></fieldset>
+<fieldset class="equipment-section"><legend>Breite & Kurbel · optional</legend><div class="fields" id="equipment-fields"></div></fieldset>
+</form>
+</section>
+<div class="result-column">
+<section class="panel foot-panel" aria-labelledby="foot-title"><div class="panel-head"><h2 id="foot-title">Fuß</h2><span class="muted" id="scope-label">Cockpit</span></div><div class="foot-grid" id="foot-profiles"></div><div class="recommendation" id="recommendation" aria-live="polite"></div></section>
+<div id="errors" class="error-banner" role="alert" hidden></div>
+<div id="result-content">
+<section class="visual-panel" aria-labelledby="visual-title"><div class="visual-head"><h2 id="visual-title">Zielposition</h2><span class="badge dark" id="result-state">Demo</span></div><svg id="plot" viewBox="0 0 800 580" role="img" aria-label="Kontaktpunkte und Lenker-Verstellbereich relativ zum Tretlager"></svg><div class="plot-legend"><span><i class="dot target-dot"></i>Ziel</span><span><i class="dot range-dot"></i>Lenkerbereich</span><span>BB = 0 / 0</span></div><div class="metrics" id="metrics"></div></section>
+<section class="panel settings-panel" aria-labelledby="settings-title"><div class="panel-head"><h2 id="settings-title">Ride einstellen</h2><span class="muted" id="active-foot"></span></div><div id="fit-status" aria-live="polite"></div><div class="settings-grid" id="adjustments"></div><div id="messages"></div></section>
+</div>
+</div>
+</div>
+<p id="print-meta" class="print-only"></p>
+</main>
+<footer><span>Ride Fit · 1.2</span><span>Lokale Berechnung</span></footer>
+<noscript><p class="error-banner">JavaScript zum Berechnen aktivieren.</p></noscript>
+</body>
+</html>

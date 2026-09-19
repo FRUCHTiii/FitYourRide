@@ -1,0 +1,770 @@
+{
+  "activeRevision": "messung-2026-09-16.4",
+  "activeReference": "axis-no-radius-correction",
+  "activeCorners": {
+    "none": [
+      {
+        "pose": "A/A",
+        "u": 0,
+        "v": 0,
+        "bbFloor": 257,
+        "barFloor": 852.5,
+        "x": 402,
+        "reference": "axis"
+      },
+      {
+        "pose": "A/X",
+        "u": 0,
+        "v": 1,
+        "bbFloor": 257,
+        "barFloor": 999.5,
+        "x": 362,
+        "reference": "axis"
+      },
+      {
+        "pose": "X/A",
+        "u": 1,
+        "v": 0,
+        "bbFloor": 257,
+        "barFloor": 863,
+        "x": 565,
+        "reference": "axis"
+      },
+      {
+        "pose": "X/X",
+        "u": 1,
+        "v": 1,
+        "bbFloor": 257,
+        "barFloor": 1008.5,
+        "x": 525,
+        "reference": "axis"
+      }
+    ],
+    "small": [
+      {
+        "pose": "A/A",
+        "u": 0,
+        "v": 0,
+        "bbFloor": 263,
+        "barFloor": 863,
+        "x": 394,
+        "reference": "axis"
+      },
+      {
+        "pose": "A/X",
+        "u": 0,
+        "v": 1,
+        "bbFloor": 263,
+        "barFloor": 1009,
+        "x": 353,
+        "reference": "axis"
+      },
+      {
+        "pose": "X/A",
+        "u": 1,
+        "v": 0,
+        "bbFloor": 263,
+        "barFloor": 875,
+        "x": 557,
+        "reference": "axis"
+      },
+      {
+        "pose": "X/X",
+        "u": 1,
+        "v": 1,
+        "bbFloor": 263,
+        "barFloor": 1020.5,
+        "x": 516,
+        "reference": "axis"
+      }
+    ],
+    "medium": [
+      {
+        "pose": "A/A",
+        "u": 0,
+        "v": 0,
+        "bbFloor": 268,
+        "barFloor": 871,
+        "x": 388,
+        "reference": "axis"
+      },
+      {
+        "pose": "A/X",
+        "u": 0,
+        "v": 1,
+        "bbFloor": 268,
+        "barFloor": 1017,
+        "x": 345.5,
+        "reference": "axis"
+      },
+      {
+        "pose": "X/A",
+        "u": 1,
+        "v": 0,
+        "bbFloor": 268,
+        "barFloor": 885,
+        "x": 550,
+        "reference": "axis"
+      },
+      {
+        "pose": "X/X",
+        "u": 1,
+        "v": 1,
+        "bbFloor": 268,
+        "barFloor": 1030.5,
+        "x": 508.5,
+        "reference": "axis"
+      }
+    ],
+    "large": [
+      {
+        "pose": "A/A",
+        "u": 0,
+        "v": 0,
+        "bbFloor": 275,
+        "barFloor": 887,
+        "x": 374.5,
+        "reference": "axis"
+      },
+      {
+        "pose": "A/X",
+        "u": 0,
+        "v": 1,
+        "bbFloor": 275,
+        "barFloor": 1033,
+        "x": 328,
+        "reference": "axis"
+      },
+      {
+        "pose": "X/A",
+        "u": 1,
+        "v": 0,
+        "bbFloor": 275,
+        "barFloor": 904,
+        "x": 536,
+        "reference": "axis"
+      },
+      {
+        "pose": "X/X",
+        "u": 1,
+        "v": 1,
+        "bbFloor": 275,
+        "barFloor": 1049.5,
+        "x": 491,
+        "reference": "axis"
+      }
+    ]
+  },
+  "independentValidation": [
+    {
+      "foot": "none",
+      "pose": "M/M",
+      "u": 0.5217391304347826,
+      "v": 0.5217391304347826,
+      "bbFloor": 257,
+      "barFloor": 934,
+      "x": 469,
+      "reference": "axis",
+      "usedInFit": false
+    },
+    {
+      "foot": "small",
+      "pose": "M/M",
+      "u": 0.5217391304347826,
+      "v": 0.5217391304347826,
+      "bbFloor": 262,
+      "barFloor": 945,
+      "x": 460,
+      "reference": "axis",
+      "usedInFit": false
+    },
+    {
+      "foot": "medium",
+      "pose": "M/M",
+      "u": 0.5217391304347826,
+      "v": 0.5217391304347826,
+      "bbFloor": 266,
+      "barFloor": 953.5,
+      "x": 452,
+      "reference": "axis",
+      "usedInFit": false
+    },
+    {
+      "foot": "large",
+      "pose": "M/M",
+      "u": 0.5217391304347826,
+      "v": 0.5217391304347826,
+      "bbFloor": 277,
+      "barFloor": 971.5,
+      "x": 438,
+      "reference": "axis",
+      "usedInFit": false
+    }
+  ],
+  "archivedThrough20260915": {
+    "units": "mm",
+    "tupleOrder": [
+      "bbFloor",
+      "barFloorTopEdge",
+      "xRearEdge"
+    ],
+    "cornerOrder": [
+      "A/A",
+      "A/X",
+      "X/A",
+      "X/X"
+    ],
+    "activeCorners": {
+      "none": [
+        {
+          "pose": "A/A",
+          "u": 0,
+          "v": 0,
+          "bbFloor": 257,
+          "barFloor": 854,
+          "x": 403.5,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        },
+        {
+          "pose": "A/X",
+          "u": 0,
+          "v": 1,
+          "bbFloor": 257,
+          "barFloor": 1004,
+          "x": 364,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        },
+        {
+          "pose": "X/A",
+          "u": 1,
+          "v": 0,
+          "bbFloor": 257,
+          "barFloor": 865.5,
+          "x": 566.5,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        },
+        {
+          "pose": "X/X",
+          "u": 1,
+          "v": 1,
+          "bbFloor": 257,
+          "barFloor": 1013,
+          "x": 528.5,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        }
+      ],
+      "small": [
+        {
+          "pose": "A/A",
+          "u": 0,
+          "v": 0,
+          "bbFloor": 264,
+          "barFloor": 869,
+          "x": 395,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": true
+        },
+        {
+          "pose": "A/X",
+          "u": 0,
+          "v": 1,
+          "bbFloor": 264,
+          "barFloor": 1013,
+          "x": 355,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": true
+        },
+        {
+          "pose": "X/A",
+          "u": 1,
+          "v": 0,
+          "bbFloor": 264,
+          "barFloor": 880,
+          "x": 558.5,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": true
+        },
+        {
+          "pose": "X/X",
+          "u": 1,
+          "v": 1,
+          "bbFloor": 264,
+          "barFloor": 1027,
+          "x": 517,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": true
+        }
+      ],
+      "medium": [
+        {
+          "pose": "A/A",
+          "u": 0,
+          "v": 0,
+          "bbFloor": 268,
+          "barFloor": 876,
+          "x": 388,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        },
+        {
+          "pose": "A/X",
+          "u": 0,
+          "v": 1,
+          "bbFloor": 268,
+          "barFloor": 1026,
+          "x": 345,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        },
+        {
+          "pose": "X/A",
+          "u": 1,
+          "v": 0,
+          "bbFloor": 268,
+          "barFloor": 899,
+          "x": 548.5,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        },
+        {
+          "pose": "X/X",
+          "u": 1,
+          "v": 1,
+          "bbFloor": 268,
+          "barFloor": 1036,
+          "x": 507,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        }
+      ],
+      "large": [
+        {
+          "pose": "A/A",
+          "u": 0,
+          "v": 0,
+          "bbFloor": 275,
+          "barFloor": 895,
+          "x": 374.5,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        },
+        {
+          "pose": "A/X",
+          "u": 0,
+          "v": 1,
+          "bbFloor": 275,
+          "barFloor": 1040,
+          "x": 328.5,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        },
+        {
+          "pose": "X/A",
+          "u": 1,
+          "v": 0,
+          "bbFloor": 275,
+          "barFloor": 911,
+          "x": 537,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        },
+        {
+          "pose": "X/X",
+          "u": 1,
+          "v": 1,
+          "bbFloor": 275,
+          "barFloor": 1055.5,
+          "x": 490.5,
+          "reference": "rear-top-edge",
+          "horizontalCarriedForward": false
+        }
+      ]
+    },
+    "otherRounds": {
+      "initial_small": [
+        [
+          265,
+          866,
+          395
+        ],
+        [
+          265,
+          1011,
+          355
+        ],
+        [
+          265,
+          878,
+          558.5
+        ],
+        [
+          265,
+          1029,
+          517
+        ]
+      ],
+      "initial_medium_labels_corrected": [
+        [
+          268,
+          880,
+          389
+        ],
+        [
+          268,
+          1026,
+          345
+        ],
+        [
+          268,
+          890,
+          551
+        ],
+        [
+          268,
+          1041,
+          517.5
+        ]
+      ],
+      "medium_xx_remeasurement": {
+        "X/X": [
+          268,
+          1036,
+          507
+        ]
+      },
+      "first_MA_controls": {
+        "none": [
+          259,
+          862,
+          488
+        ],
+        "small": [
+          264,
+          871,
+          480
+        ],
+        "medium": [
+          268,
+          881,
+          473
+        ],
+        "large": [
+          276,
+          901,
+          461
+        ]
+      },
+      "medium_low_repeat": {
+        "A/A": [
+          268,
+          876,
+          388
+        ],
+        "M/A": [
+          268,
+          884.5,
+          478.5
+        ],
+        "X/A": [
+          268,
+          899,
+          548.5
+        ]
+      },
+      "medium_latest_MA": {
+        "M/A": [
+          268,
+          884,
+          473
+        ]
+      }
+    },
+    "independentValidation": {
+      "medium_MM": {
+        "pose": "M/M",
+        "u": 0.5217391304347826,
+        "v": 0.5217391304347826,
+        "bbFloor": 268,
+        "barFloorTopEdge": 961,
+        "xRearEdge": 450,
+        "axis": {
+          "x": 465.9,
+          "y": 677.1
+        },
+        "prediction": {
+          "x": 465.6119565217391,
+          "y": 678.8282608695653
+        },
+        "residualMeasuredMinusPredicted": {
+          "x": 0.2880434782608745,
+          "y": -1.728260869565247
+        },
+        "usedInFit": false,
+        "status": "single-control-only"
+      }
+    }
+  },
+  "acceptance": {
+    "date": "2026-09-16",
+    "by": "user",
+    "scope": "handlebar-axis-all-four-profiles",
+    "status": "validated",
+    "repeatabilityTested": false,
+    "guaranteedTolerance": null,
+    "note": "User accepts present corners after independent MM controls; no repeat demanded."
+  },
+  "measurementMethod": {
+    "horizontal": "Measure to upper crown of bar tube; same x as axis.",
+    "vertical": "Measure to rear-most tube surface at axis height; same y as axis.",
+    "radiusCorrection": 0
+  },
+  "hoodCalibration": {
+    "date": "2026-09-16",
+    "rawPairedMeasurements": {
+      "none": {
+        "barFloor": 933.5,
+        "barX": 469,
+        "hoodFloor": 955,
+        "hoodX": 593
+      },
+      "small": {
+        "barFloor": 944.5,
+        "barX": 460,
+        "hoodFloor": 969,
+        "hoodX": 583
+      },
+      "medium": {
+        "barFloor": 953.5,
+        "barX": 452,
+        "hoodFloor": 978,
+        "hoodX": 575
+      },
+      "large": {
+        "barFloor": 971.5,
+        "barX": 437,
+        "hoodFloor": 998,
+        "hoodX": 561
+      }
+    },
+    "position": "M/M",
+    "referenceWidth": 400,
+    "rightMeasured": true,
+    "leftMeasured": false,
+    "leftSymmetryConfirmedByUser": true,
+    "rotationAcrossFeet": "unchanged",
+    "photo": "IMG_1098.jpeg",
+    "status": "validated",
+    "widthInvarianceChecked": false,
+    "positionInvarianceChecked": false,
+    "validatedAt": "2026-09-16",
+    "acceptedBy": "user",
+    "additionalChecksWaived": true
+  },
+  "saddle20260919": {
+    "raw": {
+      "none": {
+        "bbFloor": 257,
+        "axis": [
+          [
+            0,
+            785,
+            170
+          ],
+          [
+            12,
+            912,
+            208
+          ],
+          [
+            23,
+            1033,
+            244
+          ]
+        ],
+        "clampBaseline": [
+          912,
+          208
+        ],
+        "clamps": [
+          [
+            0,
+            912,
+            208
+          ],
+          [
+            20,
+            913,
+            188
+          ],
+          [
+            40,
+            914,
+            170
+          ],
+          [
+            60,
+            917,
+            149
+          ]
+        ]
+      },
+      "small": {
+        "bbFloor": 264,
+        "axis": [
+          [
+            0,
+            787,
+            176
+          ],
+          [
+            12,
+            915,
+            216.5
+          ],
+          [
+            23,
+            1034.5,
+            254
+          ]
+        ],
+        "clampBaseline": [
+          915,
+          216.5
+        ],
+        "clamps": [
+          [
+            0,
+            915,
+            216.5
+          ],
+          [
+            20,
+            916.5,
+            195
+          ],
+          [
+            40,
+            918,
+            178
+          ],
+          [
+            60,
+            920,
+            158
+          ]
+        ]
+      },
+      "medium": {
+        "bbFloor": 266.5,
+        "axis": [
+          [
+            0,
+            790,
+            182
+          ],
+          [
+            12,
+            917.5,
+            223.5
+          ],
+          [
+            23,
+            1036,
+            266
+          ]
+        ],
+        "clampBaseline": [
+          917.5,
+          223.5
+        ],
+        "clamps": [
+          [
+            0,
+            917.5,
+            223.5
+          ],
+          [
+            20,
+            919,
+            203.5
+          ],
+          [
+            40,
+            921,
+            185
+          ],
+          [
+            60,
+            924,
+            164
+          ]
+        ]
+      },
+      "large": {
+        "bbFloor": 277,
+        "axis": [
+          [
+            0,
+            794,
+            194
+          ],
+          [
+            12,
+            922,
+            238
+          ],
+          [
+            23,
+            1040,
+            278
+          ]
+        ],
+        "clampBaseline": [
+          921.5,
+          238
+        ],
+        "clamps": [
+          [
+            0,
+            921.5,
+            238
+          ],
+          [
+            20,
+            923.5,
+            216
+          ],
+          [
+            40,
+            925,
+            198
+          ],
+          [
+            60,
+            923.5,
+            180
+          ]
+        ]
+      }
+    },
+    "surfaceMeasurement": {
+      "screwFloor": 918,
+      "surfaceFloor": 970
+    },
+    "railMeasurement": {
+      "screwSetback": 223.5,
+      "frontSetback": 210,
+      "rearSetback": 231.5
+    },
+    "superseded": {
+      "largeXFloor": 1002,
+      "largeMFloor": 921.5,
+      "rearSetbackTypo": 23.15
+    },
+    "note": "Groß: wiederholte M-Höhe 922 für Achse; ursprüngliche 921,5 bleibt gepaarte Basis der Klemmverschiebungen. Winkel- und Schienen-Höhenmodell nicht gemessen."
+  }
+}

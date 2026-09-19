@@ -1,0 +1,10 @@
+{
+  "name": "ride-fit", "version": "1.2.0", "private": true, "type": "module",
+  "description": "German Zwift Ride geometry transfer app for GitHub Pages",
+  "scripts": {
+    "check": "node --check dist/app.mjs && node --check dist/geometry.mjs && node --check dist/fit-model.mjs && node --check dist/ride-calibration.mjs && node --check scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "serve": "python3 -m http.server 8080 --directory dist"
+  }
+}
